@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Mohni LS OÜ</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:700|Open+Sans:400,700" rel="stylesheet" type="text/css">
+    <style>
+      * { box-sizing: border-box; }
+
+      @font-face {
+        font-family: 'ico';
+        src: url(data:application/x-font-ttf;charset=utf-8;base64,AAEAAAALAIAAAwAwT1MvMg6SAywAAAC8AAAAYGNtYXAaVcxZAAABHAAAAExnYXNwAAAAEAAAAWgAAAAIZ2x5ZgMwDd8AAAFwAAACGGhlYWQECokLAAADiAAAADZoaGVhB8IDyAAAA8AAAAAkaG10eA4AAMAAAAPkAAAAHGxvY2EA8AGSAAAEAAAAABBtYXhwAA0AOQAABBAAAAAgbmFtZSr0fosAAAQwAAABIXBvc3QAAwAAAAAFVAAAACAAAwQAAZAABQAAApkCzAAAAI8CmQLMAAAB6wAzAQkAAAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAAAAAAAABAAADmAgPA/8D/wAPAAEAAAAABAAAAAAAAAAAAAAAgAAAAAAACAAAAAwAAABQAAwABAAAAFAAEADgAAAAKAAgAAgACAAEAIOYC//3//wAAAAAAIOYA//3//wAB/+MaBAADAAEAAAAAAAAAAAAAAAEAAf//AA8AAQAAAAAAAAAAAAIAADc5AQAAAAABAAAAAAAAAAAAAgAANzkBAAAAAAEAAAAAAAAAAAACAAA3OQEAAAAAAQAA/8ADwAOAADYAAAEOAQcOASMiJicuAScuAScuATU0Njc+ATc2JicuASMiBjEUFhceARceARceATMwNjU0JicuAQcCwBgcDAwcGBgwGBgwGBguEhIWFhISLhgYJCQkVBgwkC0kJVsvL4dJSIkwwD4qKlYYAUAYLhISFhYSEi4YGDAYGDAYGBwMDBwYGFYqKj7AMIlISYcvL1slJC2QMBhUJCQkGAAABQAAAAAEAANAABwAIAAkACoALgAAASEiBgcOARURFBYXHgEzITI2Nz4BNRE0JicuASMBBREBAyEFJRMXNxMhEzcBESUDoPzAFCMNDQ8PDQ0jFANAFCMNDQ8PDQ0jFP3v/vEBD98CoP6w/rDpZ2fS/Y7S2AEP/vEDQA8NDSMU/YAUIw0NDw8NDSMUAoAUIw0ND/5a0wH1/t4BJvz8/s5ubv7yAQ4MASL+C9MAAAIAwP/AA0ADwAASACsAAAEiBgcOARUUADEwADU0JicuASMRIiYnLgE1NDY3PgEzMhYXHgEVFAYHDgEjAgBCdSssMgFAAUAyLCt1QihGGhoeHhoaRigoRhoaHh4aGkYoA8AyLCt1QvD+MAHQ8EJ1Kywy/gAeGhpGKChGGhoeHhoaRigoRhoaHgABAAAAAQAAWoQ8zl8PPPUACwQAAAAAANB1okcAAAAA0HWiRwAA/8AEAAPAAAAACAACAAAAAAAAAAEAAAPA/8AAAAQAAAAAAAQAAAEAAAAAAAAAAAAAAAAAAAAHAAAAAAAAAAAAAAAAAgAAAAQAAAAEAAAABAAAwAAAAAAACgAUAB4AcgDIAQwAAQAAAAcANwAFAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAA4ArgABAAAAAAABAAYAAAABAAAAAAACAA4AKwABAAAAAAADAAYAHAABAAAAAAAEAAYAOQABAAAAAAAFABYABgABAAAAAAAGAAMAIgABAAAAAAAKADQAPwADAAEECQABAAYAAAADAAEECQACAA4AKwADAAEECQADAAYAHAADAAEECQAEAAYAOQADAAEECQAFABYABgADAAEECQAGAAYAJQADAAEECQAKADQAPwBpAGMAbwBWAGUAcgBzAGkAbwBuACAAMQAuADAAaQBjAG9pY28AaQBjAG8AUgBlAGcAdQBsAGEAcgBpAGMAbwBGAG8AbgB0ACAAZwBlAG4AZQByAGEAdABlAGQAIABiAHkAIABJAGMAbwBNAG8AbwBuAC4AAAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==) format('truetype'),
+           url(data:application/font-woff;charset=utf-8;base64,d09GRgABAAAAAAXAAAsAAAAABXQAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAABPUy8yAAABCAAAAGAAAABgDpIDLGNtYXAAAAFoAAAATAAAAEwaVcxZZ2FzcAAAAbQAAAAIAAAACAAAABBnbHlmAAABvAAAAhgAAAIYAzAN32hlYWQAAAPUAAAANgAAADYECokLaGhlYQAABAwAAAAkAAAAJAfCA8hobXR4AAAEMAAAABwAAAAcDgAAwGxvY2EAAARMAAAAEAAAABAA8AGSbWF4cAAABFwAAAAgAAAAIAANADluYW1lAAAEfAAAASEAAAEhKvR+i3Bvc3QAAAWgAAAAIAAAACAAAwAAAAMEAAGQAAUAAAKZAswAAACPApkCzAAAAesAMwEJAAAAAAAAAAAAAAAAAAAAARAAAAAAAAAAAAAAAAAAAAAAQAAA5gIDwP/A/8ADwABAAAAAAQAAAAAAAAAAAAAAIAAAAAAAAgAAAAMAAAAUAAMAAQAAABQABAA4AAAACgAIAAIAAgABACDmAv/9//8AAAAAACDmAP/9//8AAf/jGgQAAwABAAAAAAAAAAAAAAABAAH//wAPAAEAAAAAAAAAAAACAAA3OQEAAAAAAQAAAAAAAAAAAAIAADc5AQAAAAABAAAAAAAAAAAAAgAANzkBAAAAAAEAAP/AA8ADgAA2AAABDgEHDgEjIiYnLgEnLgEnLgE1NDY3PgE3NiYnLgEjIgYxFBYXHgEXHgEXHgEzMDY1NCYnLgEHAsAYHAwMHBgYMBgYMBgYLhISFhYSEi4YGCQkJFQYMJAtJCVbLy+HSUiJMMA+KipWGAFAGC4SEhYWEhIuGBgwGBgwGBgcDAwcGBhWKio+wDCJSEmHLy9bJSQtkDAYVCQkJBgAAAUAAAAABAADQAAcACAAJAAqAC4AAAEhIgYHDgEVERQWFx4BMyEyNjc+ATURNCYnLgEjAQURAQMhBSUTFzcTIRM3ARElA6D8wBQjDQ0PDw0NIxQDQBQjDQ0PDw0NIxT97/7xAQ/fAqD+sP6w6Wdn0v2O0tgBD/7xA0APDQ0jFP2AFCMNDQ8PDQ0jFAKAFCMNDQ/+WtMB9f7eASb8/P7Obm7+8gEODAEi/gvTAAACAMD/wANAA8AAEgArAAABIgYHDgEVFAAxMAA1NCYnLgEjESImJy4BNTQ2Nz4BMzIWFx4BFRQGBw4BIwIAQnUrLDIBQAFAMiwrdUIoRhoaHh4aGkYoKEYaGh4eGhpGKAPAMiwrdULw/jAB0PBCdSssMv4AHhoaRigoRhoaHh4aGkYoKEYaGh4AAQAAAAEAAFqEPM5fDzz1AAsEAAAAAADQdaJHAAAAANB1okcAAP/ABAADwAAAAAgAAgAAAAAAAAABAAADwP/AAAAEAAAAAAAEAAABAAAAAAAAAAAAAAAAAAAABwAAAAAAAAAAAAAAAAIAAAAEAAAABAAAAAQAAMAAAAAAAAoAFAAeAHIAyAEMAAEAAAAHADcABQAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAOAK4AAQAAAAAAAQAGAAAAAQAAAAAAAgAOACsAAQAAAAAAAwAGABwAAQAAAAAABAAGADkAAQAAAAAABQAWAAYAAQAAAAAABgADACIAAQAAAAAACgA0AD8AAwABBAkAAQAGAAAAAwABBAkAAgAOACsAAwABBAkAAwAGABwAAwABBAkABAAGADkAAwABBAkABQAWAAYAAwABBAkABgAGACUAAwABBAkACgA0AD8AaQBjAG8AVgBlAHIAcwBpAG8AbgAgADEALgAwAGkAYwBvaWNvAGkAYwBvAFIAZQBnAHUAbABhAHIAaQBjAG8ARgBvAG4AdAAgAGcAZQBuAGUAcgBhAHQAZQBkACAAYgB5ACAASQBjAG8ATQBvAG8AbgAuAAAAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=) format('woff');
+        font-weight: normal;
+        font-style: normal;
+      }
+
+      [class^="icon-"], [class*=" icon-"] {
+        font-family: 'ico';
+        speak: none;
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 1;
+
+        margin-right: .5em;
+
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+
+      .icon-phone:before {
+        position: relative;
+        top: 3px;
+        content: "\e600";
+      }
+      .icon-envelope:before {
+        position: relative;
+        top: 1px;
+        content: "\e601";
+      }
+      .icon-location:before {
+        position: relative;
+        top: 1px;
+        content: "\e602";
+      }
+
+      html, body {
+        margin: 0;
+        width: 100%;
+        height: 100%;
+      }
+
+      body {
+        background-image: url(bg.jpg);
+        background-position: center bottom;
+        background-size: cover;
+        color: white;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 20px;
+      }
+
+      h1, h2, h3, h4, h5 {
+        font-family: 'Montserrat', sans-serif;
+      }
+
+      a {
+        color: white;
+        text-decoration: none;
+        border-bottom: dotted 1px white;
+      }
+
+      img {
+        width: 6.25em;
+      }
+
+      a:hover {
+        border-bottom-style: solid;
+      }
+
+      .l-centered {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+
+        width: 25em;
+        height: 15em;
+
+        margin-left: -12.5em;
+        margin-top: -8em;
+
+        padding: 1.5em;
+
+        border-radius: 3px;
+        background-color: rgba(61, 162, 211, 0.9);
+        box-shadow: 0 2px 4px #333;
+      }
+
+      .subtitle {
+        text-align: center;
+        width: 11.5em;
+        font-size: .6em;
+        margin: 0;
+      }
+
+      p {
+        margin: .5em 0;
+        text-align: left;
+      }
+
+      .desc {
+        text-align: center;
+        float: right;
+        line-height: 1.6em;
+      }
+
+      .contact {
+        margin-top: 2em;
+      }
+
+      @media (max-width: 550px) {
+        .l-centered {
+          margin-left: 0;
+          left: 0;
+          width: 100%;
+        }
+      }
+
+      @media (max-width: 470px) {
+        body {
+          font-size: 16px;
+        }
+      }
+
+      @media (max-width: 400px) {
+        body {
+          font-size: 14px;
+        }
+      }
+
+      @media (max-width: 320px) {
+        body {
+          font-size: 12px;
+        }
+      }
+    </style>
+  </head>
+    <div class="l-centered">
+      <img src="logo.svg">
+      <p class="desc">
+        Sukeldumis- ja päästevarustus<br>Scuba & Rescue Equipment
+      </p>
+
+      <h6 class="subtitle">MOHNI LS OÜ</h6>
+
+      <div class="contact">
+        <p>
+          <i class="icon-phone"></i>
+          (+372) 6 595 454
+        </p>
+        <p>
+          <i class="icon-location"></i>
+          Laki 11a, 12915 Tallinn, Estonia
+        </p>
+        <p>
+          <i class="icon-envelope"></i>
+          <a href="mailto:info@mohni.ee">info@mohni.ee</a>
+        </p>
+      </div>
+
+    </div>
+  <body>
+  </body>
+</html>
